@@ -1,0 +1,32 @@
+  {% set articlesItems = pagination.items %}
+
+  {% if tag %}
+  {% set articlesItems = collections[tag] %}
+  {% set pageHeaderTitle = 'Blog posts filed under “' + tag + '”' %}
+{% endif %}
+
+  <div class="articles">
+    <h1 class="">{{ title }}</h1>
+
+    <div class="articles__grid-container">
+      {% for article in articlesItems %}
+        <ul class="">
+          <li class="">
+            {% include 'article-card.njk' %}
+          </li>
+        </ul>
+
+      {% endfor %}
+    </div>
+
+    {% block pagination%}
+                {% if not tag %}
+
+      {% include 'pagination.njk' %}
+                  {%  endif %}
+
+    {% endblock%}
+
+  </div>
+
+

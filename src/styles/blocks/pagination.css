@@ -1,0 +1,11 @@
+.pagination {
+  margin: 3rem 0;
+}
+
+.pagination__nav {
+  display: flex;
+}
+
+.pagination__link[data-direction="forwards"] {
+  margin-left: auto;
+}

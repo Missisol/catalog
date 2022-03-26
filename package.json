@@ -1,0 +1,25 @@
+{
+  "name": "catalog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eleventy.js",
+  "scripts": {
+    "dev": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "start": "npx eleventy --serve",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+  },
+  "keywords": [],
+  "author": "MarinaOl <missisololol@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "autoprefixer": "^10.4.4",
+    "concurrently": "^7.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-esbuild": "^0.10.2",
+    "gulp-postcss": "^9.0.1",
+    "postcss-csso": "^6.0.0",
+    "postcss-import": "^14.1.0"
+  }
+}

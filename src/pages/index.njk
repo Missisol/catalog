@@ -1,0 +1,15 @@
+{% block content %}
+<article class="intro">
+  <div class="">
+    <h1 class="font-theme__title">
+      {{ intro.main }}
+    </h1>
+  </div>
+  <div class="">
+    <p class="">{{ intro.summary }}</p>
+  </div>
+  <div class="">
+    <img src="{{ intro.image }}" alt="{{ intro.imageAlt }}">
+  </div>
+</article>
+{% endblock %}

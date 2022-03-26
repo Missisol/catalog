@@ -1,0 +1,24 @@
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__list-item {
+  margin-left: 1rem;
+}
+
+.header__item-link {
+  text-decoration: none;
+  color: #949393;
+}
+
+.header__item-link[aria-current="page"],
+.header__item-link[data-state="active"] {
+  color: inherit;
+}

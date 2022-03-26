@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+@import 'fonts.css';
+@import 'critical.css';
+@import 'font-theme.css';
+
+@import 'blocks/header.css';
+@import 'blocks/main.css';
+@import 'blocks/articles.css';
+@import 'blocks/article-card.css';
+@import 'blocks/pagination.css';

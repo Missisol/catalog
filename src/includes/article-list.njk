@@ -1,0 +1,32 @@
+---
+layout: pages/articles.njk
+permalink: 'articles{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
+pagination:
+  data: collections.articles
+  size: 4
+paginationPrevText: 'Newer posts'
+paginationNextText: 'Older posts'
+---
+
+  {% set articlesItems = pagination.items %}
+  <div class="articles">
+    <h1 class="">{{ title }}</h1>
+
+    <div class="articles__grid-container">
+      {% for article in articlesItems %}
+        <ul class="">
+          <li class="">
+            {% include 'article-card.njk' %}
+          </li>
+        </ul>
+
+      {% endfor %}
+    </div>
+
+    {% block pagination%}
+      <p>TTTTTT</p>
+
+      {% include 'pagination.njk' %}
+    {% endblock%}
+
+  </div>
