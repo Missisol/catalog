@@ -1,0 +1,6 @@
+:root {
+  --color-base: hsl(0, 0%, 100%);
+  --color-accent: rgb(89, 37, 230);
+  --color-inactive: hsl(80 0% 80%);
+  --color-text: hsl(0, 0%, 0%);
+}

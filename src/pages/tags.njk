@@ -1,0 +1,31 @@
+<main class="main">
+  <div class="archive">
+    <h1 class="archive__title">
+        Теги
+    </h1>
+  </div>
+
+    <p class="archive__tags">
+      {% for tags in collections.tagList %}
+        <a class="archive__tags-link"
+          {% if tag != tags %}
+            href="/tags/{{ tags | slug }}"
+          {% endif %}>
+            {{ tags }}
+        </a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+
+
+  {% set tagList = collections[tag] %}
+
+  <ul class="articles__grid-container">
+    {%- for article in tagList | reverse -%}
+      <li>
+        {% include 'article-card.njk' %}
+      </li>
+    {%- endfor -%}
+  </ul>
+
+
+</main>

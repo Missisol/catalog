@@ -8,11 +8,11 @@
   </div>
   <div class="">
       <ul class="">
-          {%- for article in articles -%}
+          {% for article in collections.articles %}
               <li class="">
                     {{ article.title}}
               </li>
-          {%- endfor -%}
+          {% endfor %}
       </ul>
   </div>
   <ul>

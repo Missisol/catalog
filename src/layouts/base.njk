@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title }}</title>
+    <title>{{ renderData.title or title }}</title>
+      <script>
+    if (matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+      document.documentElement.style.display = 'none';
+      document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="styles/light-theme.css" onload="document.documentElement.style.display=\'\'">'
+      );
+    }
+  </script>
+
+    <link rel="stylesheet" href="/styles/light-theme.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/styles/dark-theme.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/styles/index.css">
   </head>
   <body class="font-theme__title font-theme__text">
     {% include "header.njk" %}
     <main tabindex="-1" id="main-content" class="main">{{ content | safe }}</main>
+
+    <script src="/scripts/index.js" type="module"></script>
   </body>
 </html>

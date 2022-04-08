@@ -3,6 +3,7 @@
 @import 'fonts.css';
 @import 'critical.css';
 @import 'font-theme.css';
+@import 'common.css';
 
 @import 'blocks/header.css';
 @import 'blocks/main.css';

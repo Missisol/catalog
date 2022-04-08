@@ -1,7 +1,15 @@
+{% set articleData = article.data %}
+
 <article class="article-card">
-  <p>{{ article.data.author }}</p>
-  <a href="{{ article.data.url }}" target="_blanc" rel="noopener">{{ article.data.title }}</a>
+  <p>{{ articleData.author }}</p>
+  <a href="{{ articleData.url }}" target="_blanc" rel="noopener">{{ articleData.title }}</a>
   <div>
   </div>
-  <p>{{ article.data.date | dateFilter }}</p>
+  <p>{{ article.data.date | ruDateFilter }}</p>
+
+  {% if articleData.tags %}
+    {% for tag in articleData.tags %}
+      <a href="/tags/{{ tag | slugify }}">#{{ tag }}</a>
+    {% endfor %}
+  {% endif%}
 </article>

@@ -1,0 +1,12 @@
+body {
+  background: var(--color-base);
+  color: var(--color-text);
+}
+
+a {
+  color: rgb(136, 155, 238);
+}
+
+a[href*="https"i]:visited {
+  color: rgb(167, 133, 173);
+}

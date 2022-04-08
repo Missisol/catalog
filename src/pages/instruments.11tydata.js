@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Статьи',
+  title: 'Инструменты',
   layout: 'base.njk',
   permalink: 'instruments/index.html',
 }
